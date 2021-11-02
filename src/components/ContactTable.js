@@ -6,14 +6,15 @@ import { Table } from "react-bootstrap"
 const ContactTable = ({ contact }) => {
 
     const [removeContactMutation] = useMutation(REMOVE_CONTACT)
+    
 
-    const removeContact= (id) => {
+    const removeContact = (id) => {
         removeContactMutation({
             variables: { id },
             optimisticResponse: true,
             update: (cache) => {
                 const existingContacts = cache.readQuery( { query: GET_CONTACTS });
-                const contacts = existingContacts.contacts.filter((t) => t.id !== id);
+                const contacts = existingContacts.contacts.filter((t) => t.id != id);
                 cache.writeQuery({
                     query: GET_CONTACTS,
                     data: { contact }
