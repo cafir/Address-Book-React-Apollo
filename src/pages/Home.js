@@ -21,21 +21,6 @@ import ContactFrom from "../components/ContactFrom";
 
 function Login(props) {
     const {  loading, error, data } = useQuery(GET_CONTACTS)
-    // const [first_name, setFirstName] = useState("");
-    // const [last_name, setLastName] = useState("")
-    // const [phone_number, setPhoneNumber] = useState("")
-    // const [address, setAddress] = useState("")
-    // const [city, setCity] = useState("")
-    // const[addContact] = useMutation(ADD_CONTACT, { update: updateCache });
-
-    // const submitTask = () => {
-    //     addContact({ variables: { first_name, last_name, phone_number, address, city } });
-    //     setFirstName("")
-    //     setLastName("")
-    //     setPhoneNumber("")
-    //     setAddress("")
-    //     setCity("")
-    // }
 
     if (loading) {
         return <div className="task">Loading...</div>

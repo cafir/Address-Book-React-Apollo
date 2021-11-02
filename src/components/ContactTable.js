@@ -1,5 +1,5 @@
 import React from "react"
-import { useMutation } from "@apollo/client"
+import { useMutation, useQuery } from "@apollo/client"
 import { GET_CONTACTS, REMOVE_CONTACT } from "../utils/graphql/queries"
 import { Table } from "react-bootstrap"
 
@@ -14,15 +14,16 @@ const ContactTable = ({ contact }) => {
             optimisticResponse: true,
             update: (cache) => {
                 const existingContacts = cache.readQuery( { query: GET_CONTACTS });
-                const contacts = existingContacts.contacts.filter((t) => t.id != id);
+                const contacts = existingContacts.contacts.filter((t) => t.id !== id);
                 cache.writeQuery({
                     query: GET_CONTACTS,
                     data: { contact }
-                })
+                })  
             }
         })
+        
     }
-
+    
     return (
         <div key={contact.id} className="task">
             <Table striped bordered hover size="sm">

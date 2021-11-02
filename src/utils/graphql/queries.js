@@ -29,7 +29,13 @@ export const GET_CONTACTS_BY_ID = gql`
 `;
 
 export const ADD_CONTACT = gql`
-    mutation ($first_name: String!, $last_name: String!, $phone_number: String!, $city: String!, $address: String!) {
+    mutation (
+        $first_name: String!, 
+        $last_name: String!, 
+        $phone_number: String!, 
+        $city: String!, 
+        $address: String!
+        ) {
         insert_contacts(objects: [{ first_name: $first_name, last_name: $last_name, phone_number: $phone_number, city: $city, address: $address}]) {
             returning {
                 id
