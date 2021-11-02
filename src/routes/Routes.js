@@ -1,6 +1,7 @@
-import { BrowserRouter, Route, Switch} from "react-router-dom"
-import Home from "../pages/Home"
-import About from "../pages/About"
+import { BrowserRouter, Route, Switch} from "react-router-dom";
+import Home from "../pages/Home";
+import About from "../pages/About";
+import Create from "../pages/Create";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 
 function Routes() {
@@ -26,6 +27,9 @@ function Routes() {
                     </Route>
                     <Route path="/about">
                         <About/>
+                    </Route>
+                    <Route path="/ceate">
+                        <Create/>
                     </Route>
                 </Switch>
             </ApolloProvider>  

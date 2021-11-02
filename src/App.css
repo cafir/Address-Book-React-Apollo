@@ -1,0 +1,138 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Farhan CSS */
+
+.text-center {
+  text-align: center;
+}
+
+.layout-detail {
+  margin-bottom: 30px;
+}
+
+.back-detail {
+  margin-top: 10px;
+  margin-right: 20px;
+  padding: 5px 20px;
+  border-radius: 20px;
+  background-color: rgb(30, 167, 26); 
+  color: white; 
+  border: 2px solid rgb(5, 138, 0);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.back-detail:hover {
+  background-color: rgb(5, 138, 0);
+}
+
+.margin-top {
+  margin-top: 20px;
+}
+
+.margin-contact {
+  margin: 0px 20%;
+  margin-top: 65px;
+}
+
+.button-create{
+  margin-top: 10px;
+  margin-right: 10%;
+  margin-bottom: 20px;
+  padding: 5px 5%;
+  border-radius: 20px;
+  background-color: rgb(66, 69, 255); 
+  color: white; 
+  border: 2px solid #0145d8;
+  cursor: pointer;
+  text-decoration: none;
+  display: grid;
+  place-items: center;
+}
+
+.button-create:hover {
+  background-color: #0145d8;
+  color: white;
+}
+
+.searchInput {
+  margin-top: 3%;
+}
+
+.container-contact {
+  background-color: beige;
+  border: black;
+  border-style: solid;
+}
+
+.icon-delete {
+  margin-right: 10px;
+ margin-top: 10px;
+ color: orangered;
+}
+
+.icon-edit {
+  margin-top: 10px;
+  color: rgb(3, 185, 3);
+  margin-right: 10px;
+}
+
+.content-contact {
+  cursor: pointer;
+}
+
+.margin-home {
+  margin-top: 60px;
+}
+
+.margin-contactTable {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 0px;
+}
+
+.class-form {
+  cursor: pointer;
+}
+
+.margin-left-contactTable {
+  margin-left: 20px;
+}

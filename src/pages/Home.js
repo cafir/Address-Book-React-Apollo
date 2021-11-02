@@ -5,6 +5,7 @@ import NavigationBar from "../components/NavigationBar";
 import { GET_CONTACTS, ADD_CONTACT } from "../utils/graphql/queries";
 import { useQuery } from "@apollo/client";
 import ContactTable from "../components/ContactTable";
+import ContactsIcon from '@mui/icons-material/Contacts';
 
 
 function Login(props) {
@@ -21,44 +22,50 @@ function Login(props) {
     return (
         <div>
             <NavigationBar/>
-            <br/>
-            <Container fluid>
-                <Row>
-                    <Col>
-                        <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-                                <Row>
-                                    <Col sm={3}>
-                                    <Nav variant="pills" className="flex-column">
-                                        <Nav.Item>
-                                        <Nav.Link eventKey="first">All Contact</Nav.Link>
-                                        </Nav.Item>
-                                        <Nav.Item>
-                                        <Nav.Link eventKey="second">Contact With Specific User ID</Nav.Link>
-                                        </Nav.Item>
-                                    </Nav>
-                                    </Col>
-                                    <Col sm={9}>
-                                    <Tab.Content>
-                                        <Tab.Pane eventKey="first">
-                                        {data.contacts.map((contact) => (
-                                        <ContactTable key={contact.id} contact={contact}/>
-                                        ))}
-                                        </Tab.Pane>
-                                        <Tab.Pane eventKey="second">
-                                        <ClassForm/>
-                                        <br/>
-                                        {data.contacts.map((contact) => (
-                                        <ContactTable key={contact.id} contact={contact}/>
-                                        ))}
-                                        </Tab.Pane>
-                                        
-                                    </Tab.Content>
-                                    </Col>
-                                </Row>
-                        </Tab.Container>
-                    </Col>
-                </Row>
-            </Container>
+            <div className="margin-home">
+                <Container>
+                    <Row>
+                        <Col>
+                            <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+                                    <Row>
+                                        <Col sm={3}>
+                                            <Nav variant="pills" className="flex-column" fixed="top">
+                                                <Nav.Item className="class-form">
+                                                    <Nav.Link eventKey="first">All Contact</Nav.Link>
+                                                </Nav.Item>
+                                                <Nav.Item className="class-form">
+                                                    <Nav.Link eventKey="second">Contact With Specific User ID</Nav.Link>
+                                                </Nav.Item>
+                                            </Nav>
+                                        </Col>
+                                        <Col sm={9}>
+                                            <Tab.Content>
+                                                <div className="text-center">
+                                                    <h1>
+                                                        <ContactsIcon sx={{ fontSize: 40 }}/> 
+                                                        Phone Book
+                                                    </h1>
+                                                </div>
+                                                <Tab.Pane eventKey="first">
+                                                    {data.contacts.map((contact) => (
+                                                        <ContactTable key={contact.id} contact={contact}/>
+                                                    ))}
+                                                    </Tab.Pane>
+                                                    <Tab.Pane eventKey="second">
+                                                        <ClassForm/>
+                                                    <br/>
+                                                        {data.contacts.map((contact) => (
+                                                        <ContactTable key={contact.id} contact={contact}/>
+                                                    ))}
+                                                </Tab.Pane>
+                                            </Tab.Content>
+                                        </Col>
+                                    </Row>
+                            </Tab.Container>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
         </div>
     )
     
