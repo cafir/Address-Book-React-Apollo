@@ -24,7 +24,6 @@ function Routes() {
                                 <Home {...props}/>
                             </div>
                         )}
-                        
                     </Route>
                     <Route path="/update/:id">
                         {(props) => (

@@ -1,5 +1,5 @@
 import React, { useState} from "react";
-import {Form, Row, Button, Col} from "react-bootstrap"
+import {Form, Row, Button, Col, Container} from "react-bootstrap"
 import {useMutation } from "@apollo/client"
 import {GET_CONTACTS, ADD_CONTACT } from "../utils/graphql/queries"
 
@@ -44,7 +44,9 @@ function ContactFrom() {
 
     return (
             <div>
-            <Form noValidate validated={validated} onSubmit={submitTask}>
+                <Container style={{backgroundColor:"#EEEBDD"}}>
+
+            <Form noValidate validated={validated} onSubmit={submitTask} style={{padding:"20px"}}>
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="formGridFirstName">
                         <Form.Label>First Name</Form.Label>
@@ -124,6 +126,7 @@ function ContactFrom() {
                     Submit
                 </Button>
             </Form>
+                </Container>
         </div>
         
     )

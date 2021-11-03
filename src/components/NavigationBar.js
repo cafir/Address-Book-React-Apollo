@@ -12,11 +12,10 @@ function NavigationBar() {
             integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
             crossorigin="anonymous"
             />
-            
-            <Navbar collapseOnSelect expand="lg" bg="#630000" variant="dark" fixed="top">
+            <Navbar collapseOnSelect expand="lg" style={{backgroundColor:"#630000"}} variant="dark" fixed="top">
                 <Container>
                     <Navbar.Brand href="/">
-                        <ContactsIcon sx={{ fontSize: 20 }}/> PB
+                        <ContactsIcon sx={{ fontSize: 20, color:"#EEEBDD" }} /> <strong style={{color:"#EEEBDD"}}>PB</strong>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">

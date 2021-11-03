@@ -1,3 +1,8 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
 .App {
   text-align: center;
 }
@@ -40,6 +45,9 @@
 
 /* Farhan CSS */
 
+.backgroud {
+  background-color: white;
+}
 .margin-loading {
   margin-left: 10%;
   margin-right: 10%;
@@ -131,12 +139,23 @@
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 0px;
+  background-color:"white"
 }
 
 .class-form {
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .margin-left-contactTable {
   margin-left: 20px;
+}
+
+.modal-detail {
+  background-color: #EEEBDD;
+}
+
+.button-search {
+  background-color: #D8B6A4;
+  color: white;
 }
