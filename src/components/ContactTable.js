@@ -59,7 +59,7 @@ const ContactTable = ({ contact }) => {
                     <Modal.Title>Delete This Contact?</Modal.Title>
                     </Modal.Header>
                     <Modal.Footer>
-                        <Button className="icon-delete" onClick={handleCloseDel}>
+                        <Button className="icon-delete" type="submit" onClick={removeContact(contact.id)}>
                             Delete <DeleteIcon sx={{ fontSize: 40 }}/>
                         </Button>
                     </Modal.Footer>
