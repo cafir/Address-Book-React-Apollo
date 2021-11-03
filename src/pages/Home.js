@@ -6,6 +6,8 @@ import { GET_CONTACTS, ADD_CONTACT } from "../utils/graphql/queries";
 import { useQuery } from "@apollo/client";
 import ContactTable from "../components/ContactTable";
 import ContactsIcon from '@mui/icons-material/Contacts';
+import ContactFrom from "../components/ContactFrom";
+
 
 
 function Login(props) {
@@ -22,6 +24,7 @@ function Login(props) {
     return (
         <div>
             <NavigationBar/>
+
             <div className="margin-home">
                 <Container>
                     <Row>
@@ -35,6 +38,9 @@ function Login(props) {
                                                 </Nav.Item>
                                                 <Nav.Item className="class-form">
                                                     <Nav.Link eventKey="second">Contact With Specific User ID</Nav.Link>
+                                                </Nav.Item>
+                                                <Nav.Item>
+                                                    <Nav.Link eventKey="third">Contact With Specific User ID</Nav.Link>
                                                 </Nav.Item>
                                             </Nav>
                                         </Col>
@@ -58,6 +64,10 @@ function Login(props) {
                                                         <ContactTable key={contact.id} contact={contact}/>
                                                     ))}
                                                 </Tab.Pane>
+                                                
+                                                <Tab.Pane eventKey="third">
+                                                    <ContactFrom/>
+                                                </Tab.Pane>
                                             </Tab.Content>
                                         </Col>
                                     </Row>
@@ -66,6 +76,8 @@ function Login(props) {
                     </Row>
                 </Container>
             </div>
+
+            
         </div>
     )
     

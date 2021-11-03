@@ -1,7 +1,9 @@
 
+
 import React, { useState } from "react";
 import Button from "@restart/ui/esm/Button";
 import { useMutation } from "@apollo/client";
+
 import { GET_CONTACTS, REMOVE_CONTACT } from "../utils/graphql/queries"
 import { Table, Row, Col, Modal, OverlayTrigger, Tooltip } from "react-bootstrap"
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -11,8 +13,9 @@ import ModeEditOutlineOutlinedIcon from '@mui/icons-material/ModeEditOutlineOutl
 const ContactTable = ({ contact }) => {
 
     const [removeContactMutation] = useMutation(REMOVE_CONTACT)
+    
 
-    const removeContact= (id) => {
+    const removeContact = (id) => {
         removeContactMutation({
             variables: { id },
             optimisticResponse: true,
@@ -22,9 +25,10 @@ const ContactTable = ({ contact }) => {
                 cache.writeQuery({
                     query: GET_CONTACTS,
                     data: { contact }
-                })
+                })  
             }
         })
+        
     }
 
     const [show, setShow] = useState(false);
@@ -34,6 +38,7 @@ const ContactTable = ({ contact }) => {
     const handleCloseDel = () => setShowDel(false);
     const handleShow = () => setShow(true);
     const handleShowDel = () => setShowDel(true);
+
 
     return (
         <div key={contact.id} className="margin-contactTable">
