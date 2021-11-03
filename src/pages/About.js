@@ -1,7 +1,12 @@
+import NavigationBar from "../components/NavigationBar";
+
 function About() {
     return (
         <div>
-            <h1>asd</h1>
+            <NavigationBar/>
+            <div className="margin-home">
+                <h1>About</h1>
+            </div>
         </div>
     )
 }

@@ -13,9 +13,11 @@ import { Link } from "react-router-dom";
 
 const ContactTable = ({ contact }) => {
 
-    const [removeContactMutation] = useMutation(REMOVE_CONTACT)
+    const [removeContactMutation] = useMutation(REMOVE_CONTACT);
     
 
+    const [show, setShow] = useState(false);
+    const [showDel, setShowDel] = useState(false);
     const removeContact = (id) => {
         removeContactMutation({
             variables: { id },
@@ -25,15 +27,13 @@ const ContactTable = ({ contact }) => {
                 const contacts = existingContacts.contacts.filter((t) => t.id !== id);
                 cache.writeQuery({
                     query: GET_CONTACTS,
-                    data: { contact }
+                    data: { contacts }
                 })  
             }
         })
-        
+        setShowDel(false)
     }
 
-    const [show, setShow] = useState(false);
-    const [showDel, setShowDel] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleCloseDel = () => setShowDel(false);
@@ -60,7 +60,7 @@ const ContactTable = ({ contact }) => {
                     <Modal.Title>Delete This Contact?</Modal.Title>
                     </Modal.Header>
                     <Modal.Footer>
-                        <Button className="icon-delete" type="submit" onClick={() => removeContact(contact.id)}>
+                        <Button className="icon-delete" type="submit" onClick={() => removeContact(contact.id)} onHide={handleCloseDel}>
                             Delete <DeleteIcon sx={{ fontSize: 40 }}/>
                         </Button>
                     </Modal.Footer>

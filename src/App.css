@@ -40,6 +40,10 @@
 
 /* Farhan CSS */
 
+.margin-loading {
+  margin-left: 10%;
+  margin-right: 10%;
+}
 .text-center {
   text-align: center;
 }
