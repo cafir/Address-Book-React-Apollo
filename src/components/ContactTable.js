@@ -45,11 +45,11 @@ const ContactTable = ({ contact }) => {
             <div className="modal-detail">
                 <Modal show={show} onHide={handleClose} centered>
                     <Modal.Header closeButton>
-                    <Modal.Title>Farhan Ismail</Modal.Title>
+                    <Modal.Title>{contact.first_name} {contact.last_name}</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>City    : Indonesia</Modal.Body>
-                    <Modal.Body>Address : Dirumah Ngab</Modal.Body>
-                    <Modal.Body>Phone   : 097281678576</Modal.Body>
+                    <Modal.Body>City    : {contact.city}</Modal.Body>
+                    <Modal.Body>Address : {contact.address}</Modal.Body>
+                    <Modal.Body>Phone   : {contact.phone_number}</Modal.Body>
                 </Modal>
             </div>
 
