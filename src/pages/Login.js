@@ -6,6 +6,7 @@ import NavigationBar from "../components/NavigationBar";
 function Login() {
     return (
         <div>
+            
             <NavigationBar/>
             <br/>
             <Container fluid>

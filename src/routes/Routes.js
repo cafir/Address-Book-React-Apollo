@@ -3,6 +3,7 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import Create from "../pages/Create";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import Update from "../pages/Update";
 
 function Routes() {
     const client = new ApolloClient({
@@ -25,8 +26,12 @@ function Routes() {
                         )}
                         
                     </Route>
-                    <Route path="/about">
-                        <About/>
+                    <Route path="/update/:id">
+                        {(props) => (
+                            <div>
+                                <Update {...props}></Update>
+                            </div>
+                        )}
                     </Route>
                     <Route path="/ceate">
                         <Create/>

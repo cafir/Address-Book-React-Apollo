@@ -13,7 +13,7 @@ function NavigationBar() {
             crossorigin="anonymous"
             />
             
-            <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark" fixed="top">
+            <Navbar collapseOnSelect expand="lg" bg="#630000" variant="dark" fixed="top">
                 <Container>
                     <Navbar.Brand href="/">
                         <ContactsIcon sx={{ fontSize: 20 }}/> PB

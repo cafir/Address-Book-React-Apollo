@@ -9,6 +9,7 @@ import { Table, Row, Col, Modal, OverlayTrigger, Tooltip } from "react-bootstrap
 import PhoneIcon from '@mui/icons-material/Phone';
 import DeleteIcon from '@mui/icons-material/DeleteForever';
 import ModeEditOutlineOutlinedIcon from '@mui/icons-material/ModeEditOutlineOutlined';
+import { Link } from "react-router-dom";
 
 const ContactTable = ({ contact }) => {
 
@@ -74,14 +75,16 @@ const ContactTable = ({ contact }) => {
                                 <text><PhoneIcon sx={{fontSize:20}}/> {contact.phone_number}</text>
                             </div>
                         </Col>
-                        <Col xs={1}>
-                        <div className="d-flex justify-content-end">
+                        <Col xs={1} >
+                        <Link to={`/update/${contact.id}`}>
+                            <div className="d-flex justify-content-end" >
                                 <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Update!</Tooltip>}>
                                     <div className="icon-edit">
                                         <ModeEditOutlineOutlinedIcon sx={{ fontSize: 40 }} />
                                     </div>
                                 </OverlayTrigger>
                             </div>
+                        </Link>
                         </Col>
                         <Col xs={1} onClick={handleShowDel}>
                             <div className="d-flex justify-content-end">
