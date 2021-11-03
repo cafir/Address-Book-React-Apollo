@@ -18,9 +18,11 @@ function ClassForm({ setError, setToken}) {
                     <Col xs={4}>
                         <Form.Group controlId="formBasicCheckbox"/>
                         <div className="d-flex justify-content-center">
-                            <Button variant="primary" type="submit">
-                            <SearchIcon sx={{ fontSize: 21 }}/> Search
-                            </Button>
+                            <div className="button-search">
+                                <Button type="submit">
+                                    <SearchIcon sx={{ fontSize: 21 }}/> Search
+                                </Button>
+                            </div>
                         </div>
                     </Col>
                 </Row>

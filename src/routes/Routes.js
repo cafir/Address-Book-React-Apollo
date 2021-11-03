@@ -23,7 +23,6 @@ function Routes() {
                                 <Home {...props}/>
                             </div>
                         )}
-                        
                     </Route>
                     <Route path="/about">
                         <About/>

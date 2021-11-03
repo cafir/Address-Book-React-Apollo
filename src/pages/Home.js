@@ -16,12 +16,12 @@ function Login(props) {
     if (loading) {
         return (
             <div>
-            <NavigationBar/>
-            <div className="margin-home">
-                <Container>
-                    <Row>
-                        <Col>
-                            <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+                <NavigationBar/>
+                <div className="margin-home">
+                    <Container>
+                        <Row>
+                            <Col>
+                                <Tab.Container id="left-tabs-example" defaultActiveKey="first">
                                     <Row>
                                         <Col sm={3}>
                                             <Nav variant="pills" className="flex-column" fixed="top">
@@ -39,8 +39,9 @@ function Login(props) {
                                         <Col sm={9}>
                                             <div className="text-center">
                                                 <h1>
-                                                    <ContactsIcon sx={{ fontSize: 40 }}/> 
-                                                    Phone Book
+                                                    <ContactsIcon sx={{ fontSize: 40, color: "#7D1935" }}/> 
+                                                    <strong style={{color: "#630000"}}> Phone Book </strong>
+                                                    <ContactsIcon sx={{ fontSize: 40, color: "#7D1935" }}/>
                                                 </h1>
                                             </div>
                                             <div className="margin-loading">
@@ -123,11 +124,11 @@ function Login(props) {
                                             </div>
                                         </Col>
                                     </Row>
-                            </Tab.Container>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
+                                </Tab.Container>
+                            </Col>
+                        </Row>
+                    </Container>
+                </div>
         </div>
         )
     }
@@ -137,7 +138,7 @@ function Login(props) {
     }
 
     return (
-        <div>
+        <div className="backgroud">
             <NavigationBar/>
 
             <div className="margin-home">
@@ -163,8 +164,9 @@ function Login(props) {
                                             <Tab.Content>
                                                 <div className="text-center">
                                                     <h1>
-                                                        <ContactsIcon sx={{ fontSize: 40 }}/> 
-                                                        Phone Book
+                                                        <ContactsIcon sx={{ fontSize: 40, color: "#7D1935" }}/> 
+                                                        <strong style={{color: "#630000"}}> Phone Book </strong>
+                                                        <ContactsIcon sx={{ fontSize: 40, color: "#7D1935" }}/>
                                                     </h1>
                                                 </div>
                                                 <Tab.Pane eventKey="first">
@@ -191,7 +193,6 @@ function Login(props) {
                     </Row>
                 </Container>
             </div>
-
             
         </div>
     )
