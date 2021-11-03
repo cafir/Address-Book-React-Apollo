@@ -9696,10 +9696,10 @@
     "regenerator-runtime" "^0.13.7"
     "whatwg-fetch" "^3.4.1"
 
-"react-bootstrap@^2.0.1":
-  "integrity" "sha512-vx4fi3mHWWIzaAOJEzFfmTn/GHtirpASRk0C1PDBW5OZAt/VxLgUt+bvrSSh83eRmInq3wy8mERJMwuyI61KPA=="
-  "resolved" "https://registry.npmjs.org/react-bootstrap/-/react-bootstrap-2.0.1.tgz"
-  "version" "2.0.1"
+"react-bootstrap@^2.0.0-rc.1":
+  "integrity" "sha512-iKKtbEZXBd6bZ5ES5yh1nl4/gykGktL8vXh/VP4fHUZRUjIKnpvQ4F5gR33FiDyEHRXlKIlE3LRtGMZosujRuQ=="
+  "resolved" "https://registry.npmjs.org/react-bootstrap/-/react-bootstrap-2.0.0-rc.1.tgz"
+  "version" "2.0.0-rc.1"
   dependencies:
     "@babel/runtime" "^7.14.0"
     "@restart/context" "^2.1.4"

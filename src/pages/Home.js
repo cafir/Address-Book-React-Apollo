@@ -8,8 +8,6 @@ import { useQuery } from "@apollo/client";
 import ContactTable from "../components/ContactTable";
 import ContactsIcon from '@mui/icons-material/Contacts';
 
-
-
 function Login(props) {
     const {  loading, error, data } = useQuery(GET_CONTACTS)
 
