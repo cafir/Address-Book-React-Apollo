@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {Form, Button, Row, Col} from 'react-bootstrap';
-import { useMutation } from "@apollo/client";
 import SearchIcon from '@mui/icons-material/Search';
 
 function ClassForm({ setError, setToken}) {
@@ -19,7 +18,7 @@ function ClassForm({ setError, setToken}) {
                         <Form.Group controlId="formBasicCheckbox"/>
                         <div className="d-flex justify-content-center">
                             <Button variant="primary" type="submit">
-                            <SearchIcon sx={{ fontSize: 21 }}/> Search
+                                <SearchIcon sx={{ fontSize: 21 }}/> Search
                             </Button>
                         </div>
                     </Col>

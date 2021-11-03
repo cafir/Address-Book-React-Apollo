@@ -1,6 +1,6 @@
 import React, { useState} from "react";
 import {Form, Row, Button, Col} from "react-bootstrap"
-import { useQuery, useMutation } from "@apollo/client"
+import { useMutation } from "@apollo/client"
 import {GET_CONTACTS, ADD_CONTACT } from "../utils/graphql/queries"
 
 const updateCache = (cache, { data }) => {
