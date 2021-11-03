@@ -1,7 +1,9 @@
 
+
 import React, { useState } from "react";
 import Button from "@restart/ui/esm/Button";
 import { useMutation } from "@apollo/client";
+
 import { GET_CONTACTS, REMOVE_CONTACT } from "../utils/graphql/queries"
 import { Table, Row, Col, Modal, OverlayTrigger, Tooltip } from "react-bootstrap"
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -11,8 +13,9 @@ import ModeEditOutlineOutlinedIcon from '@mui/icons-material/ModeEditOutlineOutl
 const ContactTable = ({ contact }) => {
 
     const [removeContactMutation] = useMutation(REMOVE_CONTACT)
+    
 
-    const removeContact= (id) => {
+    const removeContact = (id) => {
         removeContactMutation({
             variables: { id },
             optimisticResponse: true,
@@ -22,9 +25,10 @@ const ContactTable = ({ contact }) => {
                 cache.writeQuery({
                     query: GET_CONTACTS,
                     data: { contact }
-                })
+                })  
             }
         })
+        
     }
 
     const [show, setShow] = useState(false);
@@ -35,16 +39,17 @@ const ContactTable = ({ contact }) => {
     const handleShow = () => setShow(true);
     const handleShowDel = () => setShowDel(true);
 
+
     return (
         <div key={contact.id} className="margin-contactTable">
             <div className="modal-detail">
                 <Modal show={show} onHide={handleClose} centered>
                     <Modal.Header closeButton>
-                    <Modal.Title>Farhan Ismail</Modal.Title>
+                    <Modal.Title>{contact.first_name} {contact.last_name}</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>City    : Indonesia</Modal.Body>
-                    <Modal.Body>Address : Dirumah Ngab</Modal.Body>
-                    <Modal.Body>Phone   : 097281678576</Modal.Body>
+                    <Modal.Body>City    : {contact.city}</Modal.Body>
+                    <Modal.Body>Address : {contact.address}</Modal.Body>
+                    <Modal.Body>Phone   : {contact.phone_number}</Modal.Body>
                 </Modal>
             </div>
 
@@ -54,7 +59,7 @@ const ContactTable = ({ contact }) => {
                     <Modal.Title>Delete This Contact?</Modal.Title>
                     </Modal.Header>
                     <Modal.Footer>
-                        <Button className="icon-delete" onClick={handleCloseDel}>
+                        <Button className="icon-delete" type="submit" onClick={() => removeContact(contact.id)}>
                             Delete <DeleteIcon sx={{ fontSize: 40 }}/>
                         </Button>
                     </Modal.Footer>

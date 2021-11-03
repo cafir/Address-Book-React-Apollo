@@ -3,6 +3,7 @@ import { gql } from "@apollo/client"
 export const GET_CONTACTS = gql`
     query {
         contacts {
+            id
             first_name
             last_name
             phone_number
@@ -28,8 +29,14 @@ export const GET_CONTACTS_BY_ID = gql`
 `;
 
 export const ADD_CONTACT = gql`
-    mutation ($first_name: String!, $last_name: String!, $phone_number: String!, $city: String!, $address: String!, $user_id: Int!) {
-        insert_contacts(objects: [{ first_name: $first_name, last_name: $last_name, phone_number: $phone_number, city: $city, address: $address, user_id: $user_id }]) {
+    mutation (
+        $first_name: String!, 
+        $last_name: String!, 
+        $phone_number: String!, 
+        $city: String!, 
+        $address: String!
+        ) {
+        insert_contacts(objects: [{ first_name: $first_name, last_name: $last_name, phone_number: $phone_number, city: $city, address: $address}]) {
             returning {
                 id
                 first_name

@@ -9,6 +9,7 @@ import ContactTable from "../components/ContactTable";
 import ContactsIcon from '@mui/icons-material/Contacts';
 
 
+
 function Login(props) {
     const {  loading, error, data } = useQuery(GET_CONTACTS)
 
@@ -23,6 +24,7 @@ function Login(props) {
     return (
         <div>
             <NavigationBar/>
+
             <div className="margin-home">
                 <Container>
                     <Row>
@@ -37,8 +39,9 @@ function Login(props) {
                                                 <Nav.Item className="class-form">
                                                     <Nav.Link eventKey="second">Contact With Specific User ID</Nav.Link>
                                                 </Nav.Item>
-                                                <Nav.Item className="class-form">
-                                                    <Nav.Link eventKey="third">Create Contact</Nav.Link>
+                                                <Nav.Item>
+                                                    <Nav.Link eventKey="third">Contact With Specific User ID</Nav.Link>
+
                                                 </Nav.Item>
                                             </Nav>
                                         </Col>
@@ -72,6 +75,8 @@ function Login(props) {
                     </Row>
                 </Container>
             </div>
+
+            
         </div>
     )
     
