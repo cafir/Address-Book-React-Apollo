@@ -2,6 +2,7 @@ import React from "react";
 import ClassForm from "../components/ClassForm";
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap"
 import NavigationBar from "../components/NavigationBar";
+import ContactFrom from "../components/ContactForm";
 import { GET_CONTACTS, ADD_CONTACT } from "../utils/graphql/queries";
 import { useQuery } from "@apollo/client";
 import ContactTable from "../components/ContactTable";
@@ -36,6 +37,9 @@ function Login(props) {
                                                 <Nav.Item className="class-form">
                                                     <Nav.Link eventKey="second">Contact With Specific User ID</Nav.Link>
                                                 </Nav.Item>
+                                                <Nav.Item className="class-form">
+                                                    <Nav.Link eventKey="third">Create Contact</Nav.Link>
+                                                </Nav.Item>
                                             </Nav>
                                         </Col>
                                         <Col sm={9}>
@@ -53,10 +57,12 @@ function Login(props) {
                                                     </Tab.Pane>
                                                     <Tab.Pane eventKey="second">
                                                         <ClassForm/>
-                                                    <br/>
                                                         {data.contacts.map((contact) => (
                                                         <ContactTable key={contact.id} contact={contact}/>
                                                     ))}
+                                                </Tab.Pane>
+                                                <Tab.Pane eventKey="third">
+                                                    <ContactFrom/>
                                                 </Tab.Pane>
                                             </Tab.Content>
                                         </Col>
