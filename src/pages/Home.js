@@ -2,7 +2,7 @@ import React from "react";
 import ClassForm from "../components/ClassForm";
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap"
 import NavigationBar from "../components/NavigationBar";
-import { GET_CONTACTS, ADD_CONTACT } from "../utils/graphql/queries";
+import { GET_CONTACTS} from "../utils/graphql/queries";
 import { useQuery } from "@apollo/client";
 import ContactTable from "../components/ContactTable";
 import ContactsIcon from '@mui/icons-material/Contacts';

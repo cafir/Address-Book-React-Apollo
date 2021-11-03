@@ -12,16 +12,7 @@ function NavigationBar() {
             integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
             crossorigin="anonymous"
             />
-            {/* <Navbar bg="primary" variant="dark" fixed="top" collapseOnSelect expand="lg">
-                <Container>
-                <Navbar.Brand href="/"><ContactsIcon sx={{ fontSize: 20 }}/> PB</Navbar.Brand>
-                <Nav className="me-auto">
-                <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="/">Phone</Nav.Link>
-                <Nav.Link href="/About">About</Nav.Link>
-                </Nav>
-                </Container>
-            </Navbar> */}
+            
             <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark" fixed="top">
                 <Container>
                     <Navbar.Brand href="/">
